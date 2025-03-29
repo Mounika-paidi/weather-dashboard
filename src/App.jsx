@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error fetching data:", error));
 
 const quotes = [
   "Weather is a great metaphor for life - sometimes it's good, sometimes it's bad, and there's nothing much you can do about it but carry an umbrella.",
