@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  transition: color 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.weather-dashboard {
+  width: 50vw;
+  height: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(174, 170, 170, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.weather-dashboard:hover {
+  transform: scale(1.05);
+}
+
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+
+.city-input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(3, 3, 3, 0.3);
+  text-align: center;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+.city-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.city-input:focus {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+@media (max-width: 500px) {
+  .weather-dashboard {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .city-input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .weather-info p {
+    font-size: 18px;
+  }
+}
